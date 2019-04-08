@@ -29,4 +29,14 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <div class="article">
+      <%= article.title %>
+      <%= article.author %>
+      <%= article.body %>
+      <%= link_to 'Show', article %>
+      <%= link_to 'Edit', edit_article_path(article) %>
+      <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
 <% end %>
+
