@@ -60,6 +60,10 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |tweet|string|null: false|
+|picture|image|null: false|
+|group_id|reference|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
+- has_many :users, through members
