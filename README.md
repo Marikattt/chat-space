@@ -37,7 +37,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: true, null: false, unique: true|
+|mail|string|index: true, null: false, unique: true|
 |mail|string|null: false|
 
 ### Association
@@ -49,10 +49,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: true, null: false, unique: true|
+|name|string|index: true, null: false|
 
 ### Association
-- has_many :users, though: members
+- has_many :users, through: members
 - has_many :messages
 - has_many :members
 
@@ -60,10 +60,10 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |tweet|text|null: false|
-|picture|string|null: false|
+|picture|string|null: true|
 |group_id|reference|null: false, foreign_key: true|
 |user_id|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
-- has_many :users, through members
+- has_many :users, through: members
