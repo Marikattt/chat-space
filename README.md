@@ -59,8 +59,8 @@ Things you may want to cover:
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|tweet|string|null: false|
-|picture|image|null: false|
+|tweet|text|null: false|
+|picture|string|null: false|
 |group_id|reference|null: false, foreign_key: true|
 |user_id|reference|null: false, foreign_key: true|
 
