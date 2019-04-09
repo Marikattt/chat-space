@@ -26,44 +26,44 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
-|group_id|reference|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
 
-## userテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |mail|string|index: true, null: false, unique: true|
-|mail|string|null: false|
+|name|string|null: false|
 
 ### Association
+- has_many :members
 - has_many :groups, through: members
 - has_many :messages
-- has_many :members
 
-## groupテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index: true, null: false|
 
 ### Association
+- has_many :members
 - has_many :users, through: members
 - has_many :messages
-- has_many :members
 
-## messageテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |tweet|text|null: false|
 |picture|string|null: true|
-|group_id|reference|null: false, foreign_key: true|
-|user_id|reference|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
-- has_many :users, through: members
+- belongs_to :user
