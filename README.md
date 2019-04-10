@@ -37,12 +37,12 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|mail|string|index: true, null: false, unique: true|
-|name|string|null: false|
+|mail|string|null: false, unique: true|
+|name|string|index: true, null: false|
 
 ### Association
 - has_many :members
-- has_many :groups, through: members
+- has_many :groups, through: :members
 - has_many :messages
 
 ## groupsテーブル
@@ -53,14 +53,14 @@ Things you may want to cover:
 
 ### Association
 - has_many :members
-- has_many :users, through: members
+- has_many :users, through: :members
 - has_many :messages
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |tweet|text|null: false|
-|picture|string|null: true|
+|picture|string|
 |group|references|null: false, foreign_key: true|
 |user|references|null: false, foreign_key: true|
 
