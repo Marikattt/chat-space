@@ -48,7 +48,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: true, null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :members
@@ -58,7 +58,7 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|tweet|text|null: false|
+|tweet|text|
 |picture|string|
 |group|references|null: false, foreign_key: true|
 |user|references|null: false, foreign_key: true|
