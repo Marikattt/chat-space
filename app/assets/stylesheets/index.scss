@@ -15,6 +15,7 @@ html, body {
   line-height:30px;
 }
 
+$text-color:#FFFFFF;
 .content__left{
   width:300px;
   height:100vw;
@@ -24,35 +25,36 @@ html, body {
   padding:0;
   position:relative;
   top:30px;
-  color:#FFFFFF;
+  color:$text-color;
     .content__left-top{
       background-color:#253141;
       height:100px;
       width:100%;
       position:relative;
       padding:0 20;
-      }
+    }
       .name{
-       position:absolute;
-       font-size:16px;
-       padding-left:20px;
-       top:35px;
-       font-weight:bold;
-       }
+        position:absolute;
+        font-size:16px;
+        padding-left:20px;
+        top:35px;
+        font-weight:bold;
+      }
       .icon{
         font-weight:normal;
         position:absolute;
         top:35px;
         right:20px;
         font-weight:normal;
-        }
+        color:$text-color;
+      }
     .content__left__bottom{
       background-color:#2f3e51;
       width:300px;
       height:calc(100vh-100px);
       position:absolute;
       top:100px;
-      color:#FFFFFF;
+      color:$text-color;
       bottom:0;
       margin-bottom:0;
       overflow-y:scroll;
@@ -67,7 +69,7 @@ html, body {
           font-size:11px;
           padding: 5px 20px 40px 20px;
         }
-      }
+    }
 }
 
 .content__main{
@@ -90,63 +92,63 @@ html, body {
       border-bottom: 1px solid #eeeeee;
       padding:0 40px;
       box-sizing: border-box;
-       .group-name{
-         font-size:20px;
-         display:inline-block;
-         color:#333333;
-         margin:0;
-         padding:0;
-         position:relative;
-         top:35px;
-         box-sizing:content-box;
-       }
-       .members{
-        position:absolute;
-        font-size:12px;
-        color:#999999;
-        padding-top:15px;
-        bottom:0;
-      }
-      .edit-botton{
-        color:#38AEF0;
-        height:40px;
-        width:auto;
-        border:1px solid #38AEF0;
-        top:28px;
-        padding:0 20px 0 20px;
-        position:relative;
-        line-height:40px;
-        float:right
-      }
-  }
+        .group-name{
+          font-size:20px;
+          display:inline-block;
+          color:#333333;
+          margin:0;
+          padding:0;
+          position:relative;
+          top:35px;
+          box-sizing:content-box;
+        }
+        .members{
+          position:absolute;
+          font-size:12px;
+          color:#999999;
+          padding-top:15px;
+          bottom:0;
+        }
+        .edit-botton{
+          color:#38AEF0;
+          height:40px;
+          width:auto;
+          border:1px solid #38AEF0;
+          top:28px;
+          padding:0 20px 0 20px;
+          position:relative;
+          line-height:40px;
+          float:right
+        }
+    }
     .content__main-bottom{
       overflow:scroll;
       height: calc(100vh - 190px);
       padding: 46px 40px;
       display:block;
       color:#434A54;
-         .user_name{
-           font-weight:bold;
-           font-size:16px;
-           margin:0;
-           padding:0;
-           position:relative;
-           display:inline-block;
-         }
-      .date{
-        color:#999999;
-        font-size:12px;
-        display:inline-block;
-        vertical-align:top;
-        font-weight:normal;
-        padding-left:10px;
-       }
-      .tweets{
-        padding-top:10px;
-        padding-bottom:40px;
-        font-weight:normal;
-        display:block;
-      }
+        .user_name{
+          font-weight:bold;
+          font-size:16px;
+          margin:0;
+          padding:0;
+          position:relative;
+          display:inline-block;
+        }
+        .date{
+          color:#999999;
+          font-size:12px;
+          display:inline-block;
+          vertical-align:top;
+          font-weight:normal;
+          padding-left:10px;
+        }
+        .tweets{
+          padding-top:10px;
+          padding-bottom:40px;
+          font-weight:normal;
+          display:block;
+        }
     }
 }
 footer{

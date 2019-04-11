@@ -14,13 +14,12 @@
           %p.name
             Test-user
           .icon
-            <i class="fas fa-edit"></i>
-            <i class="fas fa-cog"></i>
+            = link_to messages_path do
+              =fa_icon "edit"
+            = link_to messages_path do
+              =fa_icon "cog"
         .content__left__bottom
-          %p.content__left__bottom-group_name
-            Group Name
-          %p.content__left__bottom-message
-            Hello world! Never say good bye!!
+          = render partial: 'group'
       .content__main
         .content__main-top
           %p.group-name
@@ -30,10 +29,5 @@
           .edit-botton
             Edit
         .content__main-bottom
-          %p.user_name
-            Test-User
-          %p.date
-            2019/04/11(Thu) 00:00:00
-          %p.tweets
-            こんにちは！
+          = render partial: 'user'
     %footer
