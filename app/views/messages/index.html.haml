@@ -3,14 +3,37 @@
   %head
     %meta{charset: "utf-8"}
     %link(rel="stylesheet" href="/stylesheets/styles.scss")
+    %link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
 
   %body
     %header
       .header__title
         グループを作成しました
-    %content
-      .content__right
-        .content__right__bottom
       .content__left
+        .content__left-top
+          %p.name
+            Test-user
+          .icon
+            <i class="fas fa-edit"></i>
+            <i class="fas fa-cog"></i>
         .content__left__bottom
+          %p.content__left__bottom-group_name
+            Group Name
+          %p.content__left__bottom-message
+            Hello world! Never say good bye!!
+      .content__main
+        .content__main-top
+          %p.group-name
+            Group Name
+          %p.members
+            Member: taro, jiro, saburo
+          .edit-botton
+            Edit
+        .content__main-bottom
+          %p.user_name
+            Test-User
+          %p.date
+            2019/04/11(Thu) 00:00:00
+          %p.tweets
+            こんにちは！
     %footer
