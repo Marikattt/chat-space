@@ -4,8 +4,9 @@ html, body {
   padding: 0;
 }
 
+$blue-color:#38AEF0;
 .header__title {
-  background-color:#38AEF0;
+  background-color:$blue-color;
   height:30px;
   width:100vw;
   position:fixed;
@@ -47,7 +48,14 @@ $text-color:#FFFFFF;
         right:20px;
         font-weight:normal;
         color:$text-color;
+        cursor: pointer;
       }
+        .edit-icon{
+          color:$text-color;
+        }
+        .wheel-icon{
+          color:$text-color;
+        }
     .content__left__bottom{
       background-color:#2f3e51;
       width:300px;
@@ -58,6 +66,9 @@ $text-color:#FFFFFF;
       bottom:0;
       margin-bottom:0;
       overflow-y:scroll;
+        .group_link{
+          color:$text-color;
+        }
         .content__left__bottom-group_name{
           position:relative;
           font-size:15px;
@@ -84,7 +95,6 @@ $text-color:#FFFFFF;
   display:block;
   box-sizing: border-box;
   background-color:#fafafa;
-
     .content__main-top{
       width:calc(100vw - 300px);
       height:100px;
@@ -110,10 +120,10 @@ $text-color:#FFFFFF;
           bottom:0;
         }
         .edit-botton{
-          color:#38AEF0;
+          color:$blue-color;
           height:40px;
           width:auto;
-          border:1px solid #38AEF0;
+          border:1px solid $blue-color;
           top:28px;
           padding:0 20px 0 20px;
           position:relative;
@@ -121,7 +131,7 @@ $text-color:#FFFFFF;
           float:right
         }
     }
-    .content__main-bottom{
+    .content__main-mid{
       overflow:scroll;
       height: calc(100vh - 190px);
       padding: 46px 40px;
@@ -150,13 +160,48 @@ $text-color:#FFFFFF;
           display:block;
         }
     }
-}
-footer{
-  background-color:#DCDCDC;
-  height:100px;
-  min-width: calc(100vw - 300px);
-  position:fixed;
-  bottom:0;
-  right:0;
+    .content__main-bottom{
+      background-color:#DCDCDC;
+      height:50px;
+      min-width: calc(100vw - 300px);
+      position:fixed;
+      bottom:0;
+      padding:20px 40px;
+      display:box;
+        .input-text{
+          height:50px;
+          width:79%;
+          padding-left:10px;
+          position:relative;
+          box-sizing:content-box;
+          display:inline-block;
+          float:left;
+          border: none;
+          outline: none;
+          font-size:16px;
+        }
+        .image-label{
+          position:relative;
+          height:50px;
+          padding-right:10px;
+          line-height:50px;
+          background-color:$text-color;
+          display:inline-block;
+          float:left;
+          cursor: pointer;
+          font-size: 25px;
+            .image-icon{
+              color:black;
+            }
+        }
+        .input-button{
+          background-color:$blue-color;
+          height:50px;
+          width:100px;
+          margin-left:15px;
+          position:relative;
+          float:left;
+        }
+    }
 }
 
