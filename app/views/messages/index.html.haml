@@ -15,19 +15,31 @@
             Test-user
           .icon
             = link_to messages_path do
-              =fa_icon "edit"
+              =fa_icon "edit", class:'edit-icon'
             = link_to messages_path do
-              =fa_icon "cog"
+              =fa_icon "cog", class:'wheel-icon'
         .content__left__bottom
-          = render partial: 'group'
+          = link_to messages_path do
+            .group_link
+              = render partial: 'group'
       .content__main
         .content__main-top
           %p.group-name
             Group Name
           %p.members
-            Member: taro, jiro, saburo
+            Members: taro, jiro, saburo
           .edit-botton
             Edit
-        .content__main-bottom
+        .content__main-mid
           = render partial: 'user'
-    %footer
+        .content__main-bottom
+          %form{:action => "/", :method => "post", :class=>"form"}
+            %input{:type=>"text", :placeholder=>"type messages", :required => true, :name => "messages", :class=>"input-text"}
+            %label{:class=> "image-label", :for => "message_image" }
+              .input-icon:
+                = link_to messages_path do
+                  =fa_icon "image", class:'image-icon'
+          .click-button
+            %input{:type => "submit", :value => "SEND", :name=>"bottun", :style=>"color:white", :class=>"input-button"}
+
+
