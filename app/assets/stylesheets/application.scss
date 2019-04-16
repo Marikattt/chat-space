@@ -1,3 +1,7 @@
-@import "./reset";
 @import "font-awesome";
-@import "index";
+@import "config/*";
+@import "modules/*";
+@import "user.scss";
+@import "style.scss";
+@import "mixins/*";
+@import "messages/*"

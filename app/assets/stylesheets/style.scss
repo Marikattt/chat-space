@@ -16,7 +16,7 @@ $blue-color:#38AEF0;
   line-height:30px;
 }
 
-$text-color:#FFFFFF;
+$white:#FFFFFF;
 .content__left{
   width:300px;
   height:100vw;
@@ -26,17 +26,19 @@ $text-color:#FFFFFF;
   padding:0;
   position:relative;
   top:30px;
-  color:$text-color;
+  color:$white;
+    $side_blue_dark:#253141;
     .content__left-top{
-      background-color:#253141;
+      background-color:$side_blue_dark;
       height:100px;
       width:100%;
       position:relative;
       padding:0 20;
     }
+      $side_header_font:16px;
       .name{
         position:absolute;
-        font-size:16px;
+        font-size:$side_header_font;
         padding-left:20px;
         top:35px;
         font-weight:bold;
@@ -47,14 +49,14 @@ $text-color:#FFFFFF;
         top:35px;
         right:20px;
         font-weight:normal;
-        color:$text-color;
+        color:$white;
         cursor: pointer;
       }
         .edit-icon{
-          color:$text-color;
+          color:$white;
         }
         .wheel-icon{
-          color:$text-color;
+          color:$white;
         }
     .content__left__bottom{
       background-color:#2f3e51;
@@ -62,22 +64,24 @@ $text-color:#FFFFFF;
       height:calc(100vh-100px);
       position:absolute;
       top:100px;
-      color:$text-color;
+      color:$white;
       bottom:0;
       margin-bottom:0;
       overflow-y:scroll;
         .group_link{
-          color:$text-color;
+          color:$white;
         }
+        $side_group_name:15px;
         .content__left__bottom-group_name{
           position:relative;
-          font-size:15px;
+          font-size:$side_group_name;
           padding:20px 20px 5px 20px;
           font-weight:bold;
         }
+        $side_group_message:11px;
         .content__left__bottom-message {
           position:absolute;
-          font-size:11px;
+          font-size:$side_group_message;
           padding: 5px 20px 40px 20px;
         }
     }
@@ -185,7 +189,7 @@ $text-color:#FFFFFF;
           height:50px;
           padding-right:10px;
           line-height:50px;
-          background-color:$text-color;
+          background-color:$white;
           display:inline-block;
           float:left;
           cursor: pointer;
