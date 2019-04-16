@@ -1,0 +1,15 @@
+$blue-color:#38AEF0;
+$white:white;
+.notification {
+  .notice {
+    background-color: $blue-color;
+    color: $white;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: $alert_orange;
+    color: $white;
+    text-align: center;
+  }
+}
