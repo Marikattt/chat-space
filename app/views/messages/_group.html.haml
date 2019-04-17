@@ -1,5 +1,9 @@
 .left-header__title
-  Group Name
+  = @group.name
 .left-header__members
   .member
-  Members: taro, jiro, saburo
+    %ul.member-list
+      %li.member-list__member
+        Member:
+        - @group.users.each do |group|
+          =group.name
