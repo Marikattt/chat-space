@@ -37,8 +37,8 @@ function buildHTML(message){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('.form__message').val('').reset();
-      $('.hidden').val('').reset();
+      $('.form__message')[0].reset();
+      $('.hidden')[0].reset();
       $('.form__submit').attr('disabled', false);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })  
