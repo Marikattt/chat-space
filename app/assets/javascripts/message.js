@@ -1,7 +1,7 @@
 $(function(){
 function buildHTML(message){
   Message = message.content ? message.content : ('');
-  Image = message.image_tag ? message.image : ('');
+  Image = message.image_tag ? message.image_tag : ('');
   var html = `<div class = "message">
                 <div class = "upper-message">
                   <div class = "upper-message__user-name"> 
@@ -35,11 +35,11 @@ function buildHTML(message){
       contentType: false
     })
     .done(function(data){
-      console.log(data)
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.form__message').val('');
       $('.hidden').val('');
+      $(html)[0].reset();
       $('.form__submit').attr('disabled', false);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })  
