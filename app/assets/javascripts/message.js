@@ -65,6 +65,9 @@ function buildHTML(message){
           $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         })
       })
+      .fail(function(){
+        alert('error');
+      });
      };
   setInterval(update, 5000);
  });
