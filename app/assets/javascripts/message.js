@@ -58,7 +58,6 @@ function buildHTML(message){
       data: {id: message_id}
     })
     .done(function(data){
-      console.log(data)
       var insertHTML = '';
         data.forEach(function(message){
           insertHTML += buildHTML(message); 
@@ -66,10 +65,7 @@ function buildHTML(message){
           $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         })
       })
-    .fail(function(){
-      console.log('error');
-    });
-  };
+     };
   setInterval(update, 5000);
  });
 });
