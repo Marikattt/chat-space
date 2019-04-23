@@ -23,28 +23,6 @@ function buildHTML(message){
               </div>`
   return html;
 }
-  // var buildMessageHTML = function(message) {
-  //   Message = message.content ? message.content : ('');
-  //   Image = message.image.url ? message.image.url : ('');
-
-  //   var html = '<div class="message" data-id=' + message.id + ' data-group_id=" + message.group.id">' +
-  //                '<div class="upper-message">' +
-  //                  '<div class="upper-message__user-name">' +
-  //                     message.user_name +
-  //                  '</div>' +
-  //                  '<div class="upper-message__date">' +
-  //                     message.created_at +
-  //                  '</div>' +
-  //                '</div>' +
-  //                '<div class="lower-message">' +
-  //                  '<p class="lower-message__content">' +
-  //                     Message +
-  //                  '</p>' +
-  //                  '<img src="' + Image + '" class="lower-message__image" >' +
-  //               '</div>' +
-  //             '</div>'
-  //   return html;
-  // };
 
   $('.new_message').on('submit', function(e){
     e.preventDefault();
@@ -73,7 +51,6 @@ function buildHTML(message){
    function update(){
     var message_id = $('.message:last').data('id');
     var group_id = $('.left-header__title').data('id');
-    console.log(group_id)
     $.ajax({
       url: '/groups/group_id/api/messages',
       type: 'get',
