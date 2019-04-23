@@ -52,10 +52,10 @@ function buildHTML(message){
     var message_id = $('.message:last').data('id');
     var group_id = $('.left-header__title').data('id');
     $.ajax({
-      url: '/groups/group_id/api/messages',
+      url: 'api/messages',
       type: 'get',
       dataType: 'json',
-      data: {id: message_id}
+      data: {id: message_id, group_id: group_id.to_i}
     })
     .done(function(data){
       var insertHTML = '';
