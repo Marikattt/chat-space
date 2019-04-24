@@ -13,8 +13,8 @@ class UsersController < ApplicationController
     def index
       @users = User.where('name LIKE(?)', "%#{params[:keyword]}%").where.not(id: current_user.id)
       respond_to do |format|
-        format.html
-        format.json
+        format.html {redirect_to group_messages_path(@group), notice: 'グループを編集しました'}
+        format.json 
       end
     end
 
